@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "hw5azkbclr-aa75"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "hw5azkbclr-aa75"
+  template:
+    metadata:
+      labels:
+        app: "hw5azkbclr-aa75"
+    spec:
+      containers:
+        - name: "hw5azkbclr-aa75"
+          image: "hw5newcont.azurecr.io/hw5azkbclr"
+          ports:
+          - containerPort: 80
