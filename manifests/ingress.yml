@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "hw5azkbclr-aa75"
+    labels:
+        app: "hw5azkbclr-aa75"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: hw5namespacenew-hw5azkbclr-aa75.5d0c0e940dcc42a1b061.westeurope.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "hw5azkbclr-aa75"
+                servicePort: 80
